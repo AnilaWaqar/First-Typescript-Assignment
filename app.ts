@@ -1,3 +1,5 @@
-let famousPerson= "Steve Job";
-let message= "Once said, 'The only way to do great work is to love what you do'";
-console.log(famousPerson,message);
+ let whitespace='\n\t Anu Waqar\t\n';
+ console.log(whitespace);
+let withoutwhitespace=whitespace.trim();
+console.log(withoutwhitespace);
+ 
