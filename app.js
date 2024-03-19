@@ -1,6 +1,9 @@
-// You should create four lines that look like this:
-// console.log(5 + 3)
-console.log(4 + 4);
-console.log(10 - 2);
-console.log(4 * 2);
-console.log(16 / 2);
+// Program 1 Written By: Anila Waqar
+// Current Date: 12-3-2024
+// This Program will write Hellow Anila 
+console.log('Hellow Anila');
+// Program 2 Written By: Anila Waqar
+// Current Date: 12-3-2024
+// This Program will add two digit
+console.log(2 + 2);
+console.log(3 + 5);
