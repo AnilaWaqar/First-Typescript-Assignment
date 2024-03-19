@@ -1,29 +1,23 @@
-interface Album {
-    artist: string;
-    title: string;
-    tracks?: number; // Optional parameter for the number of tracks
-}
-
-function makeAlbum(artist: string, title: string, tracks?: number): Album {
-    let album: Album = {
-        artist: artist,
-        title: title
+// Function to store information about a car
+function createCar(manufacturer: string, modelName: string, ...options: any): Record<string, any> {
+    // Create an object to store car information
+    const car: Record<string, any> = {
+        manufacturer: manufacturer,
+        modelName: modelName,
     };
 
-    // If tracks parameter is provided, add it to the album object
-    if (tracks !== undefined) {
-        album.tracks = tracks;
+    // Process additional keyword arguments
+    for (let i = 0; i < options.length; i += 2) {
+        const key = options[i];
+        const value = options[i + 1];
+        car[key] = value;
     }
 
-    return album;
+    return car;
 }
 
-// Make three dictionaries representing different albums and print each return value
-let album1: Album = makeAlbum('Artist1', 'Album1');
-let album2: Album = makeAlbum('Artist2', 'Album2');
-let album3: Album = makeAlbum('Artist3', 'Album3', 12); // Including the number of tracks
-
-
-console.log(album1);
-console.log(album2);
-console.log(album3);
+// Call the function with required and optional information
+const myCar = createCar("Honda", "Civic", "color", "Red Wine", "year", 2023, "optionalFeature", "fully loaded,4X4")
+// Print the returned object to verify the information
+console.log("Car Information:");
+console.log(myCar);

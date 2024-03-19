@@ -1,18 +1,24 @@
-function makeAlbum(artist, title, tracks) {
-    var album = {
-        artist: artist,
-        title: title
-    };
-    // If tracks parameter is provided, add it to the album object
-    if (tracks !== undefined) {
-        album.tracks = tracks;
+// Function to store information about a car
+function createCar(manufacturer, modelName) {
+    var options = [];
+    for (var _i = 2; _i < arguments.length; _i++) {
+        options[_i - 2] = arguments[_i];
     }
-    return album;
+    // Create an object to store car information
+    var car = {
+        manufacturer: manufacturer,
+        modelName: modelName,
+    };
+    // Process additional keyword arguments
+    for (var i = 0; i < options.length; i += 2) {
+        var key = options[i];
+        var value = options[i + 1];
+        car[key] = value;
+    }
+    return car;
 }
-// Make three dictionaries representing different albums and print each return value
-var album1 = makeAlbum('Artist1', 'Album1');
-var album2 = makeAlbum('Artist2', 'Album2'); // Including the number of tracks
-var album3 = makeAlbum('Artist3', 'Album3', 12);
-console.log(album1);
-console.log(album2);
-console.log(album3);
+// Call the function with required and optional information
+var myCar = createCar("Honda", "Civic", "color", "Red Wine", "year", 2023, "optionalFeature", "fully loaded,4X4");
+// Print the returned object to verify the information
+console.log("Car Information:");
+console.log(myCar);
