@@ -1,17 +1,9 @@
-//if test passes
-var alien_color1 = 'green';
-if (alien_color1 === 'green') {
-    console.log("Congratulations! The player just earned 5 points.");
+var userNames = ['admin', 'Waqar', 'Anila', 'Rohaan', 'Jabbar'];
+for (var i = 0; i < userNames.length; i++) {
+    if (userNames[i] === 'admin') {
+        console.log('Hello admin, would you like to see the status report?');
+    }
+    else {
+        console.log("Hello ".concat(userNames[i], ", you have successfully logged in again!"));
+    }
 }
-// if test fails
-alien_color1 = "yellow";
-if (alien_color1 === 'green') {
-    console.log("The player just earned 5 points.");
-}
-// 
-// //if test fails
-// let alien_color2: string = 'red';
-// if (alien_color2 === 'green') {
-//     console.log("Congratulations! The player just earned 5 points.");
-// } else {
-//     console.log("No points earned. Keep playing!");}
